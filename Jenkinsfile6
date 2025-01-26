@@ -3,7 +3,7 @@ pipeline {
 
     parameters {
         string(name: 'MESSAGE', defaultValue: 'Hello from Jenkins!', description: 'Custom message to be echoed')
-        string(name: 'GIT_URL', defaultValue: 'https://github.com/your-username/your-repo.git', description: 'Git repository URL')
+        string(name: 'GIT_URL', defaultValue: 'https://github.com/Avikatz10/demo.git', description: 'Git repository URL')
     }
 
     stages {
