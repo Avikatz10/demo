@@ -8,7 +8,7 @@ pipeline {
         }
         stage('List Files') {
             steps {
-                sh 'ls -la' // מציג את כל הקבצים והספריות בספרייה הנוכחית
+                sh 'ls -la'
             }
         }
         stage('Hello') { 
