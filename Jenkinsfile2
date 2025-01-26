@@ -6,6 +6,11 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/Avikatz10/demo.git' 
             }
         }
+        stage('List Files') {
+            steps {
+                sh 'ls -la' // מציג את כל הקבצים והספריות בספרייה הנוכחית
+            }
+        }
         stage('Hello') { 
             steps {
                 echo 'Hello World' 
