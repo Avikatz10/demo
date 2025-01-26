@@ -1,0 +1,15 @@
+pipeline {
+    agent any
+    stages {
+        stage('Clone') {
+            steps {
+                git branch: 'main', url: 'https://github.com/Avikatz10/demo.git' 
+            }
+        }
+        stage('Hello') { 
+            steps {
+                echo 'Hello World' 
+            }
+        }
+    }
+}
