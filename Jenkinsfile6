@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+
+    parameters {
+        string(name: 'MESSAGE', defaultValue: 'Hello from Jenkins!', description: 'Custom message to be echoed')
+        string(name: 'GIT_URL', defaultValue: 'https://github.com/your-username/your-repo.git', description: 'Git repository URL')
+    }
+
+    stages {
+        stage('Echo Message') {
+            steps {
+                echo "User-defined message: ${params.MESSAGE}"
+            }
+        }
+        stage('Clone Git Repository') {
+            steps {
+                git url: "${params.GIT_URL}"
+            }
+        }
+    }
+}
