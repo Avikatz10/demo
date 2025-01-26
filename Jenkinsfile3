@@ -1,0 +1,13 @@
+pipeline {
+    agent any
+    stages {
+        stage('Create Directory') {
+            steps {
+                sh 'mkdir new_directory'
+                git add new_directory
+                git commit -m "Added new directory"
+                git push
+            }
+        }
+    }
+}
